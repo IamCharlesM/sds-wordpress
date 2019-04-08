@@ -18,7 +18,7 @@
   --lightGray: #e5e5e5;
   --gray: #999999;
   --darkGray: #333333;
-  --black: #111111);
+  --black: #111111;
 }
 
 @custom-media --phone (min-width: 576px);

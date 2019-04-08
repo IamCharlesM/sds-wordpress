@@ -40,3 +40,34 @@
     </nav>
   </header>
 </template>
+
+<style scoped>
+.navbar-dropdown {
+  /* background-color: hsl(0, 0%, 21%) */
+  background-color: #e12428 !important;
+}
+.navbar-dropdown a:hover {
+  color: #e12428 !important;
+}
+.navbar-dropdown a {
+  color: white !important;
+}
+.navbar {
+  background-color: #e12428 !important;
+}
+a {
+  color: white !important;
+}
+a:hover {
+  color: #e12428 !important;
+}
+a:active {
+  color: #e12428;
+}
+.navbar-link:not(.is-arrowless)::after {
+  border-color: white;
+}
+.is-active {
+  background-color: #e12428 !important;
+}
+</style>
