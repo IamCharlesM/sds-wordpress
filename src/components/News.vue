@@ -55,8 +55,8 @@
 export default {
   name: "Legacy",
   components: {
-    Past,
-    Present
+    // Past,
+    // Present
   }
 };
 </script>

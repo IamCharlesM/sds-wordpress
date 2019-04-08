@@ -5,8 +5,12 @@ import router from "./router";
 import App from "./App.vue";
 import store from "./store";
 import * as types from "./store/mutation-types";
+import Buefy from "buefy";
+import "buefy/dist/buefy.css";
 
 import "./assets/css/styles.css";
+
+Vue.use(Buefy);
 
 new Vue({
   el: "#app",
