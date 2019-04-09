@@ -33,7 +33,8 @@ const router = new Router({
       component: Post
     },
     {
-      path: "/:pageSlug",
+      // Updating this to allow for components to load
+      path: "/src/components/:pageSlug",
       name: "Page",
       component: Page
     },
