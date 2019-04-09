@@ -66,7 +66,7 @@ export default {
 <style scoped>
 .hero-body {
   /* Both are required for the image to appear */
-  /* background-image: url("../assets/sds-map.jpeg"); */
+  /* background-image: url("/wp-content/themes/sds-wordpress/assets/sds-map.jpeg"); */
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;

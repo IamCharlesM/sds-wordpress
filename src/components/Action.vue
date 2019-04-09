@@ -78,7 +78,7 @@ export default {
 </script>
 <style scoped>
 .hero-body {
-  /* background-image: url("../assets/action-wall.jpg") !important; */
+  /* background-image: url("/wp-content/themes/sds-wordpress/assets/action-wall.jpg") !important; */
   /* background-position: center center; */
   /* background-repeat: no-repeat; */
   /* background-attachment: fixed; */
@@ -104,25 +104,25 @@ export default {
 
 .col-1 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../assets/col-image-1e.jpg");
+    url("/wp-content/themes/sds-wordpress/assets/col-image-1e.jpg");
   background-size: cover;
 }
 
 .col-2 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../assets/col-image-2e.jpg");
+    url("/wp-content/themes/sds-wordpress/assets/col-image-2e.jpg");
   background-size: cover;
 }
 
 .col-3 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../assets/col-image-4e.jpg");
+    url("/wp-content/themes/sds-wordpress/assets/col-image-4e.jpg");
   background-size: cover;
 }
 
 .col-4 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../assets/col-image-3e.jpg");
+    url("/wp-content/themes/sds-wordpress/assets/col-image-3e.jpg");
   background-size: cover;
 }
 </style>

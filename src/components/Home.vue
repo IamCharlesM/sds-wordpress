@@ -44,7 +44,7 @@ export default {
 <style scoped>
 .hero-body {
   /* Both are required for the image to appear */
-  background-image: url("../assets/wall-1.jpg");
+  background-image: url("/wp-content/themes/sds-wordpress/src/assets/wall-1.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;

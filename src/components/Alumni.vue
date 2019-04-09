@@ -1,27 +1,29 @@
 <template>
-<section class="hero has-text-centered is-white ">
+  <section class="hero has-text-centered is-white">
     <div class="hero-body has-text-white">
       <div class="container animated fadeIn">
         <div class="columns">
           <div class="column bg">
-            <p class="title slow">
-              The Legacy
-            </p>
+            <p class="title slow">The Legacy</p>
             <br>
-          <div class="columns ">
+            <div class="columns">
               <div class="column">
-                <router-link to="/legacy/past"><a class="button is-danger is-inverted has-text-black">Past</a></router-link>
+                <router-link to="/legacy/past">
+                  <a class="button is-danger is-inverted has-text-black">Past</a>
+                </router-link>
               </div>
 
-              <div class="column ">
-                <router-link  to="/legacy/present"><a class="button is-danger is-inverted has-text-black">Present</a></router-link>
+              <div class="column">
+                <router-link to="/legacy/present">
+                  <a class="button is-danger is-inverted has-text-black">Present</a>
+                </router-link>
               </div>
             </div>
             <hr>
             <div class="columns">
               <div class="column">
                 <div class="image is-128x128 is-centered">
-                  <img class="is-rounded" src="../assets/levy.jpg">
+                  <img class="is-rounded" src="/wp-content/themes/sds-wordpress/assets/levy.jpg">
                 </div>
                 <br>
                 <p class="title is-size-5">Ted Levy (1999-2001) Artistic Consultant</p>
@@ -37,13 +39,10 @@
                   choreographer to Savion Glover for Broadway's 1996 Tony Award Winner, "Bring in 'da Noise, Bring in
                   'da Funk." He has perfomed in China with the Chicago Human Rhythm Project as well as taught workshops
                   and performed with Annual Rhythm World.
-
                 </p>
               </div>
             </div>
-
           </div>
-
         </div>
       </div>
     </div>
@@ -51,25 +50,22 @@
 </template>
 
 <script>
-
-  export default {
-    name: 'Alumni',
-  }
-
+export default {
+  name: "Alumni"
+};
 </script>
 <style scoped>
-  .image {
-    margin: 0 auto;
-  }
+.image {
+  margin: 0 auto;
+}
 
-  .hero-body {
-    /* Both are required for the image to appear */
-    /* background-image: url("../assets/ALL NEW-2108.jpg") !important ; */
-    /* background-position: center center; */
-    /* background-repeat:  no-repeat; */
-    /* background-attachment: fixed; */
-    /* background-size:  cover; */
-    /* color: black */
-  }
-
+.hero-body {
+  /* Both are required for the image to appear */
+  /* background-image: url("/wp-content/themes/sds-wordpress/assets/ALL NEW-2108.jpg") !important ; */
+  /* background-position: center center; */
+  /* background-repeat:  no-repeat; */
+  /* background-attachment: fixed; */
+  /* background-size:  cover; */
+  /* color: black */
+}
 </style>
