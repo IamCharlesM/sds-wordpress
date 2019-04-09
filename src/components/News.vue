@@ -23,7 +23,10 @@
             <div class="columns">
               <div class="column">
                 <div class="image is-128x128 is-centered">
-                  <img class="is-rounded" src="/wp-content/themes/sds-wordpress/assets/levy.jpg">
+                  <img
+                    class="is-rounded"
+                    src="/wp-content/themes/sds-wordpress/src/assets/levy.jpg"
+                  >
                 </div>
                 <br>
                 <p class="title is-size-5">Ted Levy (1999-2001) Artistic Consultant</p>
@@ -67,7 +70,7 @@ export default {
 
 .hero-body {
   /* Both are required for the image to appear */
-  /* background-image: url("/wp-content/themes/sds-wordpress/assets/ALL NEW-2108.jpg") !important ; */
+  /* background-image: url("/wp-content/themes/sds-wordpress/src/assets/ALL NEW-2108.jpg") !important ; */
   /* background-position: center center; */
   /* background-repeat:  no-repeat; */
   /* background-attachment: fixed; */

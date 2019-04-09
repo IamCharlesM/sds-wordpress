@@ -26,7 +26,7 @@ export default {
 <style scoped>
 .hero-body {
   /* Both are required for the image to appear */
-  /* background-image: url("/wp-content/themes/sds-wordpress/assets/ALL NEW-2108.jpg") !important ; */
+  /* background-image: url("/wp-content/themes/sds-wordpress/src/assets/ALL NEW-2108.jpg") !important ; */
   /* background-position: center center; */
   /* background-repeat:  no-repeat; */
   /* background-attachment: fixed; */
@@ -35,7 +35,7 @@ export default {
 }
 
 .wall-1 {
-  background-image: url("/wp-content/themes/sds-wordpress/assets/wall.jpg");
+  background-image: url("/wp-content/themes/sds-wordpress/src/assets/wall.jpg");
   background-size: cover;
 }
 </style>

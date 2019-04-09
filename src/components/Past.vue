@@ -25,7 +25,7 @@
                 <div class="image is-128x128 is-centered">
                   <img
                     class="is-rounded"
-                    src="/wp-content/themes/sds-wordpress/assets/sammydyer.jpg"
+                    src="/wp-content/themes/sds-wordpress/src/assets/sammydyer.jpg"
                   >
                 </div>
                 <br>
@@ -47,7 +47,7 @@
                 <div class="image is-128x128 is-centered">
                   <img
                     class="is-rounded"
-                    src="/wp-content/themes/sds-wordpress/assets/Shirleyhall.jpg"
+                    src="/wp-content/themes/sds-wordpress/src/assets/Shirleyhall.jpg"
                   >
                 </div>
                 <br>
@@ -82,7 +82,7 @@ export default {
 <style scoped>
 .hero-body {
   /* Both are required for the image to appear */
-  /* background-image: url("/wp-content/themes/sds-wordpress/assets/ALL NEW-2108.jpg") !important ; */
+  /* background-image: url("/wp-content/themes/sds-wordpress/src/assets/ALL NEW-2108.jpg") !important ; */
   /* background-position: center center; */
   /* background-repeat:  no-repeat; */
   /* background-attachment: fixed; */
