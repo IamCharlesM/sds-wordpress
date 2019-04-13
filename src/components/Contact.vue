@@ -46,9 +46,14 @@
               </div>
             </div>
           </div>
-          <div class="column is-one-third card has-text-black">
+
+          <div class="column is-one-third card has-text-black has-text-centered">
             <p class="title">Harold Washington Cultural Center</p>
             <hr>
+            <div class="image is-is5by3 is-centered">
+              <img src="/wp-content/themes/sds-wordpress/src/assets/HWDCC.jpg">
+            </div>
+            <br>
             <p class="subtitle">4701 S Dr. Martin Luther King Drive, Chicago, IL</p>
             <p class="subtitle">Phone: 773.968.9053 or 773.939.8211</p>
           </div>
