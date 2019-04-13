@@ -3,7 +3,7 @@
     <div class="hero-body">
       <div class="container">
         <div class="columns has-text-white">
-          <div class="column col-1">
+          <div class="column col-1 has-text-centered">
             <p class="title has-text-white is-size-3">Registration</p>
 
             <p class="action-text">
@@ -19,7 +19,7 @@
               </router-link>
             </span>
           </div>
-          <div class="column col-2">
+          <div class="column col-2 has-text-centered">
             <p class="title has-text-white">Schedule</p>
 
             <p class="action-text">
@@ -35,7 +35,8 @@
               </router-link>
             </span>
           </div>
-          <div class="column col-3">
+
+          <div class="column col-3 has-text-centered">
             <p class="title has-text-white">Events</p>
 
             <p class="action-text">
@@ -50,7 +51,7 @@
               </router-link>
             </span>
           </div>
-          <div class="column col-4">
+          <div class="column col-4 has-text-centered">
             <p class="title has-text-white">Staff</p>
 
             <p class="action-text">

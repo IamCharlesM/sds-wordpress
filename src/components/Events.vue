@@ -3,12 +3,14 @@
     <div class="columns">
       <div class="column is-one-third hero is-fullheight is-paddingless is-marginless">
         <div class="hero-body hero-body">
-          <div class="container">
-            <p class="title has-text-white">Lorem ipsum</p>
-            <p
-              class="subtitle slow has-text-white"
-            >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, necessitatibus. Eum voluptatum odio eius vero, in saepe id inventore tempore facere, cupiditate a adipisci voluptate, hic nam sunt sapiente accusantium!</p>
-            <a class="button is-primary is-inverted is-outlined">TICKETS AVAILABLE SOON</a>
+          <div class="container has-text-centered">
+            <p class="title has-text-white">Upcoming events:</p>
+            <p class="subtitle slow has-text-white">Events coming soon!</p>
+            <div class="columns">
+              <span class="column"></span>
+              <a class="button is-primary is-inverted is-outlined">TICKETS AVAILABLE SOON</a>
+              <span class="column"></span>
+            </div>
           </div>
         </div>
       </div>

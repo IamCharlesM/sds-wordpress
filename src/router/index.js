@@ -34,7 +34,7 @@ const router = new Router({
     },
     {
       // Updating this to allow for components to load
-      path: "/src/components/:pageSlug",
+      path: "/post/:pageSlug",
       name: "Page",
       component: Page
     },

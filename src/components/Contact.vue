@@ -23,8 +23,8 @@
               <div class="control">
                 <div class="select">
                   <select>
-                    <option>Select dropdown</option>
-                    <option>With options</option>
+                    <option>General Questions</option>
+                    <option>Registration</option>
                   </select>
                 </div>
               </div>
@@ -33,7 +33,7 @@
             <div class="field">
               <label class="label">Message</label>
               <div class="control">
-                <textarea class="textarea" placeholder="Textarea"></textarea>
+                <textarea class="textarea" placeholder="This form is currently inactive"></textarea>
               </div>
             </div>
 
@@ -66,7 +66,7 @@ export default {
 <style scoped>
 .hero-body {
   /* Both are required for the image to appear */
-  /* background-image: url("/wp-content/themes/sds-wordpress/src/assets/sds-map.jpeg"); */
+  background-image: url("/wp-content/themes/sds-wordpress/src/assets/sds-map.jpeg");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;

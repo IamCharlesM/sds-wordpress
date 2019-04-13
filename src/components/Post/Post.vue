@@ -3,6 +3,8 @@
     <template v-if="post">
       <h1>{{ post.title.rendered }}</h1>
       <div v-html="post.content.rendered"></div>
+      <recent-posts-widget limit="5">Recent Posts</recent-posts-widget>
+      <pages-widget limit="5">Pages</pages-widget>
     </template>
     <Loader v-else/>
   </div>
