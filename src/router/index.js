@@ -16,6 +16,7 @@ import Gallery from "../components/Gallery.vue";
 import Past from "../components/Past.vue";
 import Present from "../components/Present.vue";
 import Almuni from "../components/Alumni.vue";
+import Holder from "../components/Holder.vue";
 
 Vue.use(Router);
 
@@ -87,6 +88,11 @@ const router = new Router({
       path: "/almuni",
       name: "Almuni",
       component: Almuni
+    },
+    {
+      path: "/coming-soon",
+      name: "Holder",
+      component: Holder
     }
   ],
   mode: "history",
