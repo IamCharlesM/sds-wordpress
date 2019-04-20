@@ -39,7 +39,7 @@
 
             <div class="field is-grouped">
               <div class="control">
-                <button class="button is-link">Submit</button>
+                <button class="button is-link" title="Disabled button">Disabled</button>
               </div>
               <div class="control">
                 <button class="button is-text">Cancel</button>

@@ -21,17 +21,17 @@
           <div class="navbar-end">
             <router-link class="navbar-item" to="/">Home</router-link>
             <router-link class="navbar-item" to="/coming-soon">Registration</router-link>
-            <router-link class="navbar-item" to="/schedule">Schedule</router-link>
+            <router-link class="navbar-item" to="/coming-soon">Schedule</router-link>
 
             <div class="navbar-item has-dropdown is-hoverable is-boxed">
               <a class="navbar-link">More</a>
 
               <div class="navbar-dropdown is-boxed">
                 <router-link class="navbar-item" to="/legacy/past">Legacy</router-link>
-                <router-link class="navbar-item" to="/staff">Staff</router-link>
+                <router-link class="navbar-item" to="/coming-soon">Staff</router-link>
                 <router-link class="navbar-item" to="/contact">Contact Us</router-link>
                 <router-link class="navbar-item" to="/events">Events</router-link>
-                <router-link class="navbar-item" to="/gallery">Gallery</router-link>
+                <router-link class="navbar-item" to="/coming-soon">Gallery</router-link>
               </div>
             </div>
           </div>
