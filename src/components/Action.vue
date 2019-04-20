@@ -4,67 +4,43 @@
       <div class="container">
         <div class="columns has-text-white">
           <div class="column col-1 has-text-centered">
-            <p class="title has-text-white is-size-3">Registration</p>
+            <router-link to="/coming-soon">
+              <p class="title has-text-white is-size-3">Registration</p>
 
-            <p class="action-text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam deserunt illum, esse
-              aut ducimus
-              recusandae, deleniti quia quidem voluptatum, fugiat quasi placeat magni rerum? Debitis commodi excepturi
-              reiciendis amet eius?
-            </p>
-
-            <span class="box has-text-centered">
-              <router-link to="/registration">
-                <a class="button is-danger">Register</a>
-              </router-link>
-            </span>
+              <span
+                class="action-text"
+              >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati illum ducimus est rem, eligendi porro architecto! Incidunt vero, optio quas ipsum molestias quae iusto quos dicta voluptatibus nulla, iure dolorum.</span>
+            </router-link>
           </div>
           <div class="column col-2 has-text-centered">
-            <p class="title has-text-white">Schedule</p>
+            <router-link to="/coming-soon">
+              <p class="title has-text-white">Schedule</p>
 
-            <p class="action-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis repellat esse
-              sequi facere,
-              accusantium ratione animi perferendis repellendus hic quis porro quibusdam, error sapiente, aspernatur
-              veritatis nisi et autem!
-            </p>
-
-            <span class="box has-text-centered">
-              <router-link to="/schedule">
-                <a class="button is-danger">Schedule</a>
-              </router-link>
-            </span>
+              <span
+                class="action-text"
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum fugiat culpa quod, corporis atque accusantium deleniti ipsam, excepturi eius aperiam voluptatum quibusdam rem eveniet repellat sunt assumenda perspiciatis vel amet?</span>
+            </router-link>
           </div>
 
           <div class="column col-3 has-text-centered">
-            <p class="title has-text-white">Events</p>
+            <router-link to="/coming-soon">
+              <p class="title has-text-white">Events</p>
 
-            <p class="action-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, modi pariatur
-              sapiente nemo iusto dicta
-              sunt necessitatibus rem saepe sit. Eaque soluta ullam ab magnam mollitia alias explicabo error voluptate.
-            </p>
-
-            <span class="box has-text-centered">
-              <router-link to="/events">
-                <a class="button is-danger">Tickets</a>
-              </router-link>
-            </span>
+              <span
+                class="action-text"
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum id perspiciatis dolorem sunt optio est suscipit cum beatae. Earum ipsum aperiam nihil et consequuntur est dicta blanditiis assumenda omnis perferendis.</span>
+            </router-link>
           </div>
+
           <div class="column col-4 has-text-centered">
-            <p class="title has-text-white">Staff</p>
-
-            <p class="action-text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias eaque ut
-              nesciunt velit molestiae
-              eius aut architecto illum quas? Laborum eos vitae similique dolores culpa ullam, alias hic vel velit.
-            </p>
-
-            <span class="box has-text-centered">
-              <router-link to="/staff">
-                <a class="button is-danger">Staff</a>
-              </router-link>
-            </span>
+            <router-link to="/coming-soon">
+              <p class="title has-text-white">Staff</p>
+              <span>
+                <p
+                  class="action-text"
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus porro ea eaque mollitia. Quos et, sequi ea voluptatem ipsa tempore suscipit dolor impedit molestias cumque, numquam odit aliquam dolorum accusamus?Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              </span>
+            </router-link>
           </div>
         </div>
       </div>
@@ -104,26 +80,30 @@ export default {
 }
 
 .col-1 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url("/wp-content/themes/sds-wordpress/src/assets/col-image-1e.jpg");
   background-size: cover;
 }
 
 .col-2 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url("/wp-content/themes/sds-wordpress/src/assets/col-image-2e.jpg");
   background-size: cover;
 }
 
 .col-3 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url("/wp-content/themes/sds-wordpress/src/assets/col-image-4e.jpg");
   background-size: cover;
 }
 
 .col-4 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
     url("/wp-content/themes/sds-wordpress/src/assets/col-image-3e.jpg");
   background-size: cover;
+}
+
+.action-text {
+  visibility: hidden;
 }
 </style>
