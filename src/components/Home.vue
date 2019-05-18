@@ -63,11 +63,11 @@ export default {
         axios.get('http://localhost/index.php/wp-json/wp/v2/posts?slug=home')
           .then((resp) => {
             this.posts = resp.data[0]
-            console.log(resp)
+            // console.log(resp)
           })
-          .catch((err) => {
-            console.log(err)
-          })
+          // .catch((err) => {
+          //   console.log(err)
+          // })
       }
     }
 };

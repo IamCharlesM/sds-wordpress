@@ -4,9 +4,9 @@
       <div class="container animated fadeIn">
         <div class="columns">
           <div class="column bg">
-            <p class="title has-text-white slow">The purpose</p>
+            <p class="title has-text-white slow">{{posts.title.rendered}}</p>
             <hr>
-            <p>The purpose of the Sammy Dyer School of the Theatre is to promote the progress of creativity and education in the performing arts as well as to assist children in receiving quality instruction in technique and dance appreciation.</p>
+            <p>{{posts.content.rendered}}</p>
           </div>
         </div>
       </div>
@@ -15,9 +15,42 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
-  name: "Splitter"
-};
+  name: "Splitter",
+
+
+data() {
+      return {
+        posts: {}
+      }
+},
+    
+
+    created() {
+      this.fetchData()
+    },
+
+    watch: {
+      '$route': 'fetchData'
+    },
+
+    methods: {
+      fetchData() {
+        // The API is not SEO friendly so we use the route params(:slug) to make it so
+        // axios.get('http://localhost/index.php/wp-json/wp/v2/posts?slug=' + this.$options.name + '/')
+        axios.get('http://localhost/index.php/wp-json/wp/v2/posts?slug=splitter')
+          .then((resp) => {
+            this.posts = resp.data[0]
+            // console.log(resp)
+          })
+          // .catch((err) => {
+          //   console.log(err)
+          // })
+      }
+    }
+}
 </script>
 
 <style scoped>

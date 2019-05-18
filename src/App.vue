@@ -29,7 +29,7 @@ import ProgressBar from "./components/partials/ProgressBar.vue";
 export default {
   data() {
     return {
-      showLoader: false
+      showLoader: true
     };
   },
   computed: {
