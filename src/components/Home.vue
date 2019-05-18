@@ -6,9 +6,11 @@
           <div class="container animated fadeIn">
             <div class="columns">
               <div class="column">
-                <p class="title slow">Sammy Dyer School of the Theatre</p>
+                <p class="title slow">{{posts.title.rendered}}
+                </p>
                 <hr>
-                <p>Celebrating 85 Years of service to the Performing Arts.</p>
+                <p>{{posts.content.rendered}}
+                </p>
               </div>
               <div class="column"></div>
             </div>
@@ -24,6 +26,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 import RecentPostsWidget from "./widgets/RecentPosts.vue";
 import PagesWidget from "./widgets/Pages.vue";
 import Splitter from "./Splitter.vue";
@@ -37,7 +40,36 @@ export default {
     Action,
     Splitter,
     Staff
-  }
+  },
+
+  data() {
+      return {
+        posts: {}
+      }
+    },
+
+    created() {
+      this.fetchData()
+    },
+
+    watch: {
+      '$route': 'fetchData'
+    },
+
+    methods: {
+      fetchData() {
+        // The API is not SEO friendly so we use the route params(:slug) to make it so
+        // axios.get('http://localhost/index.php/wp-json/wp/v2/posts?slug=' + this.$options.name + '/')
+        axios.get('http://localhost/index.php/wp-json/wp/v2/posts?slug=home')
+          .then((resp) => {
+            this.posts = resp.data[0]
+            console.log(resp)
+          })
+          .catch((err) => {
+            console.log(err)
+          })
+      }
+    }
 };
 </script>
 
