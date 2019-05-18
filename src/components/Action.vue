@@ -3,7 +3,7 @@
     <div class="hero-body">
       <div class="container">
         <div class="columns has-text-white">
-          <div class="column col has-text-centered" v-if="posts && posts.length" v-for="post of posts">
+          <div :id=post.title.rendered class="column has-text-centered" v-if="posts && posts.length" v-for="post of posts">
             <router-link :to=post.slug>
               <span class="container">
                 <p class="title has-text-white">{{post.title.rendered}}</p>
@@ -46,12 +46,14 @@ import axios from 'axios'
         axios.get('http://localhost/index.php/wp-json/wp/v2/posts?categories=3')
           .then((resp) => {
             this.posts = resp.data
-            console.log(resp)
+            // console.log(resp)
           })
           .catch((err) => {
-            console.log(err)
+            // console.log(err)
           })
       }
+
+      
     }
   }
 </script>
@@ -81,25 +83,25 @@ import axios from 'axios'
     box-shadow: none;
   }
 
-   .col-1 {
+   #Registration {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
       url("/wp-content/themes/sds-wordpress/src/assets/col-image-1e.jpg");
     background-size: cover;
   }
 
-  .col-2 {
+  #Events {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
       url("/wp-content/themes/sds-wordpress/src/assets/col-image-2e.jpg");
     background-size: cover;
   }
 
-  .col-3 {
+  #Schedule {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
       url("/wp-content/themes/sds-wordpress/src/assets/col-image-4e.jpg");
     background-size: cover;
   }
 
-  .col-4 {
+  #Staff {
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
       url("/wp-content/themes/sds-wordpress/src/assets/col-image-3e.jpg");
     background-size: cover;
