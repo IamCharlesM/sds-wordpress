@@ -6,10 +6,10 @@
           <div class="container animated fadeIn">
             <div class="columns">
               <div class="column">
-                <p class="title slow">{{posts.title.rendered}}
+                <p class="title slow" v-html="posts.title.rendered">
                 </p>
                 <hr>
-                <p>{{posts.content.rendered}}
+                <p v-html="posts.content.rendered">
                 </p>
               </div>
               <div class="column"></div>
