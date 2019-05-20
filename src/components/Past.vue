@@ -21,7 +21,7 @@
             </div>
             <hr>
             <div class="columns">
-              <div class="column" v-if="posts && posts.length" v-for="post of posts">
+              <div class="column" v-for="post in posts">
                 <div class="image is-128x128 is-centered">
                   <img
                     class="is-rounded"
@@ -29,9 +29,8 @@
                   >
                 </div>
                 <br>
-                <p class="title is-size-5">{{post.title.rendered}}</p>
-                <p class="subtitle">
-                  {{post.content.rendered}}
+                <p class="title is-size-5" v-html="post.title.rendered"></p>
+                <p class="subtitle" v-html="post.content.rendered">
                 </p>
               </div>
            
@@ -82,15 +81,7 @@ data() {
 };
 </script>
 <style scoped>
-.hero-body {
-  /* Both are required for the image to appear */
-  /* background-image: url("/wp-content/themes/sds-wordpress/src/assets/ALL NEW-2108.jpg") !important ; */
-  /* background-position: center center; */
-  /* background-repeat:  no-repeat; */
-  /* background-attachment: fixed; */
-  /* background-size:  cover; */
-  /* color: black */
-}
+
 
 .image {
   margin: 0 auto;

@@ -29,9 +29,8 @@
                   >
                 </div>
                 <br>
-                <p class="title is-size-5"> {{posts.title.rendered}} </p>
-                <p class="subtitle">
-                  {{posts.content.rendered}}
+                <p class="title is-size-5" v-html="posts.title.rendered"> </p>
+                <p class="subtitle" v-html="posts.content.rendered">
                 </p>
               </div>
             </div>
@@ -82,15 +81,7 @@ data() {
 };
 </script>
 <style scoped>
-.hero-body {
-  /* Both are required for the image to appear */
-  /* background-image: url("/wp-content/themes/sds-wordpress/src/assets/ALL NEW-2108.jpg") !important ; */
-  /* background-position: center center; */
-  /* background-repeat:  no-repeat; */
-  /* background-attachment: fixed; */
-  /* background-size:  cover; */
-  /* color: black */
-}
+
 
 .image {
   margin: 0 auto;

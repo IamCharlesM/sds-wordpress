@@ -3,7 +3,7 @@
     <div class="hero-body">
       <div class="container">
         <div class="columns has-text-white">
-          <div :id=post.title.rendered class="column has-text-centered" v-if="posts && posts.length" v-for="post of posts">
+          <div :id=post.title.rendered class="column has-text-centered" v-for="post in posts">
             <router-link :to=post.slug>
               <span class="container">
                 <p class="title has-text-white">{{post.title.rendered}}</p>
