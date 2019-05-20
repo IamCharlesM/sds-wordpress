@@ -6,7 +6,7 @@
           <div :id=post.title.rendered class="column has-text-centered" v-for="post in posts">
             <router-link :to=post.slug>
               <span class="container">
-                <p class="title has-text-white">{{post.title.rendered}}</p>
+                <p class="title has-text-white" v-html="posts.title.rendered"></p>
                 <span>
                   <p class="action-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam corporis velit quod, quaerat laboriosam repellat beatae sunt natus in necessitatibus, commodi nemo excepturi corrupti? Dolor laboriosam incidunt alias obcaecati explicabo.</p>
                 </span>
