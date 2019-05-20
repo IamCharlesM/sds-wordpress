@@ -4,9 +4,9 @@
       <div class="container animated fadeIn">
         <div class="columns">
           <div class="column bg">
-            <p class="title has-text-white slow">{{posts.title.rendered}}</p>
+            <p class="title has-text-white slow" v-html="posts.title.rendered"></p>
             <hr>
-            <p>{{posts.content.rendered}}</p>
+            <p v-html="posts.content.rendered"></p>
           </div>
         </div>
       </div>
