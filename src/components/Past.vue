@@ -21,51 +21,20 @@
             </div>
             <hr>
             <div class="columns">
-              <div class="column">
+              <div class="column" v-if="posts && posts.length" v-for="post of posts">
                 <div class="image is-128x128 is-centered">
                   <img
                     class="is-rounded"
-                    src="/wp-content/themes/sds-wordpress/src/assets/sammydyer.jpg"
+                    :src=post.fimg_url
                   >
                 </div>
                 <br>
-                <p class="title is-size-5">Sammy Vashon Dyer (1933-1960) - Founder/Director</p>
+                <p class="title is-size-5">{{post.title.rendered}}</p>
                 <p class="subtitle">
-                  The Sammy Dyer School of Dancing was established in May 1933 by noted Choreographer
-                  Sammy Dyer.
-                  Dyer, an Instructor of Tap Dance and stage shows for Muriel Abbott and the famous Abbotteers,
-                  produced cafe shows at the old Sunset Cafe, Club Morocco, and the Club DeLisa where he spent eighteen
-                  years. In 1950 Sammy Dyer created the Dyerettes, an African American female dance troupe known to be
-                  the only chorus act of its kind. The Dyerettes toured internationally with some of the greatest
-                  entertainers of the twentieth century including Nat King Cole, Sammy Davis Jr., and Sarah Vaughn. Mr.
-                  Dyer's desire to provide affordable dance education to African American children resulted in the
-                  establishment of The Sammy Dyer School of the Theatre. Today the legacy continues as the School of
-                  Theatre is entering its 85th year.
+                  {{post.content.rendered}}
                 </p>
               </div>
-              <div class="column">
-                <div class="image is-128x128 is-centered">
-                  <img
-                    class="is-rounded"
-                    src="/wp-content/themes/sds-wordpress/src/assets/Shirleyhall.jpg"
-                  >
-                </div>
-                <br>
-                <p class="title is-size-5">
-                  Shirley Hall Bass
-                  (1960-1998)
-                  Artistic Director
-                </p>
-                <p class="subtitle">
-                  In 1980, at Mr. Dyer's request, the Directorship of the school was passed to
-                  Dyerette Shirley Hall Bass. In 1968, Mrs. Bass traveled to the Bahamas Islands with 30 Sammy Dyer
-                  students, beginning the Cultural Exchange Workshop. In this program students from the Bahamas Dance
-                  Theatre and Sammy Dyer School travel each year to share culture and tradition through dance and
-                  friendship. In recent years the Chicago school has hosted an array of exciting dance workshops and
-                  seminars including "Tap Explosion", which featured Broadway star and instructorr, Savion Glover.
-                  Students of Sammy Dyer have also placed 1st in numerous competitions on regional and national levels.
-                </p>
-              </div>
+           
             </div>
           </div>
         </div>
@@ -75,8 +44,41 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
-  name: "Past"
+  name: "Past",
+
+data() {
+      return {
+        posts: {}
+      }
+},
+    
+
+    created() {
+      this.fetchData()
+    },
+
+    watch: {
+      '$route': 'fetchData'
+    },
+
+    methods: {
+      fetchData() {
+        // The API is not SEO friendly so we use the route params(:slug) to make it so
+        // axios.get('http://localhost/index.php/wp-json/wp/v2/posts?slug=' + this.$options.name + '/')
+        axios.get('http://localhost/index.php/wp-json/wp/v2/posts?categories=4')
+          .then((resp) => {
+            this.posts = resp.data
+            // console.log(resp)
+          })
+          .catch((err) => {
+            // console.log(err)
+          })
+      }
+
+      
+    }
 };
 </script>
 <style scoped>
