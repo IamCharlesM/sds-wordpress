@@ -5,8 +5,8 @@
         <div class="columns">
           <div class="column bg">
             <p class="title slow">Board of Directors</p>
-            <div class="columns">
-              <div class="column" v-for="director in directors">
+            <div class="columns is-multiline">
+              <div class="column is-one-third" v-for="director in directors">
                 <div class="image">
                   <img :src=director.fimg_url>
                 </div>
@@ -17,14 +17,16 @@
             </div>
             <p class="title slow">Our Staff</p>
             <hr>
-            <div class="columns">
-              <div class="column" v-for="instructor in instructors">
+            <div class="columns is-multiline">
+              <div  class="column is-one-third " v-for="instructor in instructors">
+                <span class="staff">
                 <div class="image ">
                   <img :src=instructor.fimg_url>
                 </div>
                 <br>
                 <p class="title is-size-5" v-html="instructor.title.rendered"></p>
                 <p class="subtitle" v-html="instructor.content.rendered"></p>
+                </span>
               </div>
             </div>
             
@@ -80,4 +82,5 @@ img {
   max-height: 200px;
   margin: 0 auto !important; 
 }
+
 </style>
