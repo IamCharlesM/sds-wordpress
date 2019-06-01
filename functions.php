@@ -51,3 +51,4 @@ function get_rest_featured_image( $object, $field_name, $request ) {
     }
     return false;
 }
+

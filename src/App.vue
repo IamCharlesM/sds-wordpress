@@ -12,11 +12,12 @@
 
     <transition name="page-transition" mode="out-in" appear>
       <div class="site-content">
+        <page />
         <router-view></router-view>
       </div>
     </transition>
 
-    <!-- <app-footer/> -->
+    <app-footer/>
   </div>
 </template>
 
@@ -27,6 +28,7 @@ import Footer from "./components/partials/Footer.vue";
 import ProgressBar from "./components/partials/ProgressBar.vue";
 
 export default {
+  
   data() {
     return {
       showLoader: true

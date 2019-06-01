@@ -28,7 +28,7 @@
 
               <div class="navbar-dropdown is-boxed">
                 <router-link class="navbar-item" to="/legacy/past">Legacy</router-link>
-                <router-link class="navbar-item" to="/coming-soon">Staff</router-link>
+                <router-link class="navbar-item" to="/staff">Staff</router-link>
                 <router-link class="navbar-item" to="/contact">Contact Us</router-link>
                 <router-link class="navbar-item" to="/events">Events</router-link>
                 <router-link class="navbar-item" to="/coming-soon">Gallery</router-link>

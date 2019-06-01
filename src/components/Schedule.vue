@@ -19,13 +19,4 @@ export default {
 };
 </script>
 <style scoped>
-.hero-body {
-  /* Both are required for the image to appear */
-  /* background-image: url("/wp-content/themes/sds-wordpress/src/assets/ALL NEW-2108.jpg") !important ; */
-  /* background-position: center center; */
-  /* background-repeat:  no-repeat; */
-  /* background-attachment: fixed; */
-  /* background-size:  cover; */
-  /* color: black */
-}
 </style>

@@ -4,40 +4,30 @@
       <div class="container animated fadeIn">
         <div class="columns">
           <div class="column bg">
+            <p class="title slow">Board of Directors</p>
+            <div class="columns">
+              <div class="column" v-for="director in directors">
+                <div class="image">
+                  <img :src=director.fimg_url>
+                </div>
+                <br><br>
+                <p class="title is-size-5" v-html="director.title.rendered"></p>
+                <p class="subtitle" v-html="director.content.rendered"></p>
+              </div>
+            </div>
             <p class="title slow">Our Staff</p>
             <hr>
             <div class="columns">
-              <div class="column">
-                <div class="image is-128x128 is-centered">
-                  <img src="/wp-content/themes/sds-wordpress/src/assets/placeholder.jpg">
+              <div class="column" v-for="instructor in instructors">
+                <div class="image ">
+                  <img :src=instructor.fimg_url>
                 </div>
                 <br>
-                <p class="title is-size-5">Lorem ipsum</p>
-                <p
-                  class="subtitle"
-                >Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam veritatis dolor illo quidem eius excepturi. Similique nisi fugit quos nihil odio qui officiis id nobis? Veritatis tempore dignissimos autem omnis!</p>
-              </div>
-              <div class="column">
-                <div class="image is-128x128 is-centered">
-                  <img src="/wp-content/themes/sds-wordpress/src/assets/placeholder.jpg">
-                </div>
-                <br>
-                <p class="title is-size-5">Lorem ipsum</p>
-                <p
-                  class="subtitle"
-                >Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam veritatis dolor illo quidem eius excepturi. Similique nisi fugit quos nihil odio qui officiis id nobis? Veritatis tempore dignissimos autem omnis!</p>
-              </div>
-              <div class="column">
-                <div class="image is-128x128 is-centered">
-                  <img src="/wp-content/themes/sds-wordpress/src/assets/placeholder.jpg">
-                </div>
-                <br>
-                <p class="title is-size-5">Lorem ipsum</p>
-                <p
-                  class="subtitle"
-                >Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam veritatis dolor illo quidem eius excepturi. Similique nisi fugit quos nihil odio qui officiis id nobis? Veritatis tempore dignissimos autem omnis!</p>
+                <p class="title is-size-5" v-html="instructor.title.rendered"></p>
+                <p class="subtitle" v-html="instructor.content.rendered"></p>
               </div>
             </div>
+            
           </div>
         </div>
       </div>
@@ -46,22 +36,48 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
-  name: "Staff"
+  name: "Staff",
+
+    data() {
+      return {
+        instructors: {},
+        directors: {}
+      }
+},
+    
+
+    created() {
+      this.fetchData()
+    },
+
+    watch: {
+      '$route': 'fetchData'
+    },
+
+    methods: {
+      fetchData() {
+        Promise.all([
+          axios.get('http://localhost/index.php/wp-json/wp/v2/posts?categories=8'),
+          axios.get('http://localhost/index.php/wp-json/wp/v2/posts?categories=7')
+        ]).then(([instructor, director]) => {
+          // console.log(instructor.data)
+          this.instructors = instructor.data
+          this.directors = director.data
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+
+        }
+        }
 };
 </script>
 <style scoped>
-.image {
-  margin: 0 auto;
-}
-
-.hero-body {
-  /* Both are required for the image to appear */
-  /* background-image: url("/wp-content/themes/sds-wordpress/src/assets/ALL NEW-2108.jpg") !important ; */
-  /* background-position: center center; */
-  /* background-repeat:  no-repeat; */
-  /* background-attachment: fixed; */
-  /* background-size:  cover; */
-  /* color: black */
+img {
+  max-width: 200px;
+  max-height: 200px;
+  margin: 0 auto !important; 
 }
 </style>
