@@ -5,7 +5,7 @@ const path = require("path");
 module.exports = {
   entry: {
     index: "./src/app.js",
-    "index.min": "./src/app.js"
+    "index.min": "./src/app.js",
   },
   stats: { warnings: false }, // Hide warnings
   output: {
@@ -102,5 +102,5 @@ module.exports = {
     }),
     new webpack.LoaderOptionsPlugin({ minimize: true }),
     new ExtractTextPlugin("styles.css")
-  ]
+  ],
 };

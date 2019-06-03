@@ -5,11 +5,17 @@
         <div class="hero-body hero-body">
           <div class="container has-text-centered">
             <p class="title has-text-white">Upcoming events:</p>
-            <p class="subtitle slow has-text-white">Events coming soon!</p>
             <div class="columns">
-              <span class="column"></span>
-              <a class="button is-primary is-inverted is-outlined">TICKETS AVAILABLE SOON</a>
-              <span class="column"></span>
+              <div class="column">
+                <span v-for="post in posts">
+                  <span class="has-text-white" v-html="post.title.rendered"></span>
+                  <div class="image is-square">
+                  <img :src=post.fimg_url>
+                </div>
+                <br>
+            <span v-html="post.content.rendered"></span>
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -21,8 +27,42 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
-  name: "Events"
+  name: "Events",
+
+data() {
+      return {
+        posts: {}
+      }
+},
+    
+
+    created() {
+      this.fetchData()
+    },
+
+    watch: {
+      '$route': 'fetchData'
+    },
+
+    methods: {
+      fetchData() {
+        // The API is not SEO friendly so we use the route params(:slug) to make it so
+        // axios.get('http://localhost/index.php/wp-json/wp/v2/posts?slug=' + this.$options.name + '/')
+        axios.get('http://localhost/index.php/wp-json/wp/v2/posts?categories=9')
+          .then((resp) => {
+            this.posts = resp.data
+            // console.log(resp)
+          })
+          .catch((err) => {
+            console.log(err)
+          })
+      }
+
+      
+    }
+
 };
 </script>
 <style scoped>
