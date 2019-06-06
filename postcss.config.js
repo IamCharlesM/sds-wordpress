@@ -27,4 +27,4 @@ module.exports = {
     }
   },
   sourceMap: true || "inline"
-};
+}
