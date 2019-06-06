@@ -7,7 +7,7 @@ module.exports = {
     index: "./src/app.js",
     "index.min": "./src/app.js",
   },
-  stats: { warnings: false }, // Hide warnings
+  stats: { warnings: true }, // Hide warnings
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "scripts/[name].bundle.js"

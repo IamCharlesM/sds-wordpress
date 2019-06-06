@@ -20,8 +20,8 @@
         <div id="navbarMenuHeroA" class="navbar-menu" v-bind:class="{'is-active': isOpen}">
           <div class="navbar-end">
             <router-link class="navbar-item" to="/">Home</router-link>
-            <router-link class="navbar-item" to="/coming-soon">Registration</router-link>
-            <router-link class="navbar-item" to="/coming-soon">Schedule</router-link>
+            <router-link class="navbar-item" to="/registration">Registration</router-link>
+            <router-link class="navbar-item" to="/schedule">Schedule</router-link>
 
             <div class="navbar-item has-dropdown is-hoverable is-boxed">
               <a class="navbar-link">More</a>
